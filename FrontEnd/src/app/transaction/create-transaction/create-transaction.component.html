@@ -1,0 +1,26 @@
+<div class="card">
+    <div class="card-body">
+        <h2 class="card-title">Agregar Transaccion</h2>
+        <div class="card-text">
+            <form (ngSubmit)="onSubmit();" [formGroup]="form">
+                <div class="form-group">
+                    Descripcion:
+                    <input formControlName="descripcion" class="form-control" type="text">
+                </div>
+                <div class="form-group">
+                    Cantidad:
+                    <input formControlName="amount" class="form-control" type="number">
+                </div>
+                <div class="form-group">
+                    Cuenta:
+                    <input formControlName="account" class="form-control" type="number">
+                </div>
+                <div class="form-group">
+                    Fecha:
+                    <input formControlName="date" class="form-control" type="datetime">
+                </div>
+                <button class="btn btn-block btn-primary" [disabled]="!form.valid" type="submit">Agregar</button>
+            </form>
+        </div>
+    </div>
+</div>

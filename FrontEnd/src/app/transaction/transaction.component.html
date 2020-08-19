@@ -1,0 +1,20 @@
+<div class="card">
+    <div class="card-body">
+        <h2 class="card-title"> Cuentas </h2>
+        
+        <div class="card-text">
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <tbody>
+                        <tr *ngFor="let transaction of transactions">
+                            <td>{{transaction.name}}</td>
+                            <td>{{transaction.amount}}</td>
+                            <td>{{transaction.transactionDate}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="btn btn-primary btn-block" routerLink="/Transacions">Agregar</button>
+            </div>
+        </div>
+    </div>
+</div>
